@@ -134,7 +134,7 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="border-t border-stone-800 pt-8 mt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 font-sans gap-4">
-          <p>© 2026 <a href="https://chamil-sachintha.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-spice-red hover:underline transition-all duration-300">Chamil Sachintha</a>. All Rights Reserved.</p>
+          <p>© 2026 <a href="https://chamil-sachintha.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-spice-red transition-all duration-300">Chamil Sachintha</a>. All Rights Reserved.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:underline">Privacy Policy</a>
             <a href="#" className="hover:underline">Terms of Service</a>
