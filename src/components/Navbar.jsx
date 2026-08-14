@@ -169,7 +169,7 @@ export default function Navbar({ cart, isCartOpen, setIsCartOpen, searchQuery, s
 
         {/* Mobile Drawer Footer */}
         <div className="p-5 border-t border-stone-200 bg-white/40 text-center text-xs text-stone-500 font-sans">
-          <p>© 2026 SPICEYLON Spices. Sourced with Love.</p>
+          <p>© 2026 <a href="https://chamil-sachintha.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-spice-red transition-all duration-300">Chamil Sachintha</a>. All Rights Reserved.</p>
         </div>
       </div>
 
