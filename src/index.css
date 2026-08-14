@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Offset for sticky navbar */
+  }
+
+  body {
+    @apply bg-spice-light font-sans text-stone-800 antialiased overflow-x-hidden selection:bg-spice-red/20 selection:text-spice-red;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(2, 92, 34, 0.03) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(209, 26, 26, 0.03) 0px, transparent 50%),
+      url('https://www.transparenttextures.com/patterns/cream-paper.png');
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold tracking-tight text-stone-900;
+  }
+}
+
+@layer utilities {
+  /* Keyframe Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-8px) rotate(1deg);
+    }
+  }
+
+  @keyframes rotateSlow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Animation classes */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-rotate-slow {
+    animation: rotateSlow 40s linear infinite;
+  }
+
+  /* Custom glassmorphism classes */
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-organic;
+  }
+
+  .glass-navbar {
+    @apply bg-spice-light/85 backdrop-blur-md border-b border-stone-200/40;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-spice-light;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-stone-300 rounded-full hover:bg-spice-green/45 transition-colors duration-300;
+  }
+
+  /* Hide default scrollbar but allow scrolling */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
